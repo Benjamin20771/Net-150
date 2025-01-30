@@ -5,7 +5,9 @@ In this lab I, and for some parts a partner, have discovered how to look at how 
 
 ### Useful Commands 
 -arp -d = This clears all ARP traffic on the wireshark application 
+
 -ping = This is used usually with IP addresses to look at traffic or to test internet connection with another device
+
 -netsh interface ip delete arpcache = This is the same as the arp -d but only on linux
 
 ### Problems/Troubleshooting
