@@ -154,3 +154,19 @@ Foster to Skiff	192.25.10.96	/30 (255.255.255.252)	192.25.10.97 - 192.25.10.98	1
 
 Joyce to Skiff	192.25.10.100	/30 (255.255.255.252)	192.25.10.101 - 192.25.10.102	192.25.10.159
 
+
+
+
+# Subnet design example
+
+Central: 800 hosts/22 X.X.4.0
+
+East: 325 hosts/23 x.x.6.0
+
+West: 300 hosts/23 x.x.7.0
+
+East Lab: 50 hosts/26 x.x.8.0
+
+West Lab: 50 hosts/26 x.x.8.0
+
+
