@@ -1,172 +1,97 @@
-# Complete Guide to Subnetting 192.25.10.0/24 into 5 Subnets
+# Complete Guide to Subnetting 
 
-### Step 1: Understand the Given Network
+![image](https://github.com/user-attachments/assets/772af3e0-ee63-41af-8eb0-63007cf1b96b)
 
-Starting Network Address: 192.25.10.0
+# Example
 
-Default Subnet Mask: /24 (255.255.255.0)
+## IP Addressing Scheme:
 
-Total Addresses in /24: 256 (0-255)
+### LAN 1 (connected to Router1):
 
-Hosts Required for Each Subnet:
+Network Address: 192.168.1.0/24
 
-Foster → 30 hosts
+Router1 LAN Interface: 192.168.1.1
 
-Joyce → 20 hosts
+PC1: 192.168.1.2
 
-Skiff → 30 hosts
+PC2: 192.168.1.3
 
-Foster to Skiff → 2 hosts
+PC3: 192.168.1.4
 
-Joyce to Skiff → 2 hosts
+PC4: 192.168.1.5
 
-Each subnet will require a subnet mask that provides at least the needed number of usable hosts.
+### LAN 2 (connected to Router2):
 
-### Step 2: Determine the Required Subnet Sizes
-The subnet mask determines how many IPs a subnet has. To find the correct subnet mask, we use the formula:
+Network Address: 192.168.2.0/24
 
-Total Addresses
-=
-2
-ℎ
-Total Addresses=2 
-h
- 
-Usable Hosts
-=
-2
-ℎ
-−
-2
-Usable Hosts=2 
-h
- −2
-Where:
+Router2 LAN Interface: 192.168.2.1
 
-h is the number of host bits.
-Subtracting 2 accounts for the network and broadcast addresses.
-We select the smallest power of 2 that fits the required hosts:
+PC5: 192.168.2.2
 
-Required Hosts	Total Needed (2^h)	Usable Hosts	Subnet Mask (CIDR)
+PC6: 192.168.2.3
 
-30--32--30--/27=(255.255.255.224)
+PC7: 192.168.2.4 
 
-20--32--30--/27=(255.255.255.224)
+## Inter-Router Connection:
 
-30--32--30--/27=(255.255.255.224)
+Network Address: 10.0.0.0/30
 
-2--4--2--/30=(255.255.255.252)
+Router1 Serial Interface: 10.0.0.1
 
-2--4--2--/30=(255.255.255.252)
+Router2 Serial Interface: 10.0.0.2
 
-### Step 3: Assign Subnet Addresses
-We start at 192.25.10.0 and increment by the subnet size.
+## Configuration Steps:
 
-Subnet	Network Address	Subnet Mask	Total Addresses	Usable Hosts	Broadcast Address
+Assign IP Addresses:
 
-Foster (30 hosts)	192.25.10.0	255.255.255.224 (/27)	32	30	192.25.10.31
+### Router1:
 
-Joyce (20 hosts)	192.25.10.32	255.255.255.224 (/27)	32	30	192.25.10.63
+LAN Interface (connected to Switch1): 192.168.1.1/24
 
-Skiff (30 hosts)	192.25.10.64	255.255.255.224 (/27)	32	30	192.25.10.95
+Serial Interface (connected to Router2): 10.0.0.1/30
 
-Foster to Skiff (2 hosts)	192.25.10.96	255.255.255.252 (/30)	4	2	192.25.10.127
+### Router2:
 
-Joyce to Skiff (2 hosts)	192.25.10.128	255.255.255.252 (/30)	4	2	192.25.10.159
+LAN Interface (connected to Switch2): 192.168.2.1/24
 
-### Step 4: Find Usable IP Ranges
-Each subnet has:
+Serial Interface (connected to Router1): 10.0.0.2/30
 
-First usable address: Network address +1
+### PCs:
 
-Last usable address: Broadcast address -1
+Assign IP addresses as per the scheme above.
 
-Subnet	Lowest Host	Highest Host
+Set the default gateway of PCs in LAN 1 to 192.168.1.1.
 
-Foster	192.25.10.1--192.25.10.30
+Set the default gateway of PCs in LAN 2 to 192.168.2.1.
 
-Joyce	192.25.10.33--192.25.10.62
+## Configure Routing:
 
-Skiff	192.25.10.65--192.25.10.94
+### Router1:
 
-Foster to Skiff	192.25.10.97--192.25.10.126
+Add a static route to LAN 2:
 
-Joyce to Skiff	192.25.10.101--192.25.10.158
+ip route 192.168.2.0 255.255.255.0 10.0.0.2
 
-### Step 5: Convert to Binary
-Let’s see the binary representation of important values to understand subnetting better.
+### Router2:
 
-Binary of 192.25.10.0
+Add a static route to LAN 1:
 
-Decimal	Binary
+ip route 192.168.1.0 255.255.255.0 10.0.0.1
 
-192--11000000
+## Connect Devices:
 
-25--00011001
+### Switch1:
 
-10--00001010
+Connect to Router1's LAN interface.
 
-0--00000000
+Connect PC1, PC2, PC3, and PC4 to Switch1.
 
-Binary of 192.25.10.0:
-11000000 00011001 00001010 00000000
+### Switch2:
 
-Binary of Subnet Masks
-/27 (255.255.255.224)
+Connect to Router2's LAN interface.
 
-11111111 11111111 11111111 11100000
-/30 (255.255.255.252)
+Connect PC5, PC6, and PC7 to Switch2.
 
-11111111 11111111 11111111 11111100
+### Inter-Router Link:
 
-### Final Notes
-How do you determine subnet mask sizes?
-
-Use the host formula: 2^h - 2 ≥ required hosts
-
-Choose the smallest power of 2 that fits.
-
-The number of network bits is 32 - h (gives CIDR notation).
-
-How do you find broadcast addresses?
-
-The last address in the subnet is always the broadcast address.
-
-This is found by setting all host bits to 1 in binary.
-
-How do you find the first and last usable host?
-
-First usable IP = Network Address + 1
-
-Last usable IP = Broadcast Address - 1
-
-Summary Table
-
-Subnet	Network	Subnet Mask	Usable IP Range	Broadcast
-
-Foster	192.25.10.0	/27 (255.255.255.224)	192.25.10.1 - 192.25.10.30	192.25.10.31
-
-Joyce	192.25.10.32	/27 (255.255.255.224)	192.25.10.33 - 192.25.10.62	192.25.10.63
-
-Skiff	192.25.10.64	/27 (255.255.255.224)	192.25.10.65 - 192.25.10.94	192.25.10.95
-
-Foster to Skiff	192.25.10.96	/30 (255.255.255.252)	192.25.10.97 - 192.25.10.98	192.25.10.127
-
-Joyce to Skiff	192.25.10.100	/30 (255.255.255.252)	192.25.10.101 - 192.25.10.102	192.25.10.159
-
-
-
-
-# Subnet design example
-
-Central: 800 hosts/22 X.X.4.0
-
-East: 325 hosts/23 x.x.6.0
-
-West: 300 hosts/23 x.x.7.0
-
-East Lab: 50 hosts/26 x.x.8.0
-
-West Lab: 50 hosts/26 x.x.8.0
-
-
+Connect Router1's serial interface to Router2's serial interface.
