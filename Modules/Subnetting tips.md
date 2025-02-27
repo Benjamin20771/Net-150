@@ -2,6 +2,20 @@
 
 ![image](https://github.com/user-attachments/assets/772af3e0-ee63-41af-8eb0-63007cf1b96b)
 
+# IPV4 summary
+
+192.168.X.Z
+
+X is the Network Address assigned to a network. All IPV4 addresses will have the same network address (X).
+
+Z is the Host Address. Each IPV4 address will have a different one in the network. 
+
+X is the unique identifier for networks while Z is the unique identifier for each device in the network
+
+# Subent Mask
+
+A subnet mask masks the network portion of an IP address to reveal how many bits are used in the network.
+
 # Example
 
 ## IP Addressing Scheme:
