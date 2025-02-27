@@ -2,6 +2,13 @@
 
 ![image](https://github.com/user-attachments/assets/772af3e0-ee63-41af-8eb0-63007cf1b96b)
 
+# Lab 7.1 quick note
+
+router rip
+
+version 2 command
+
+
 # IPV4 summary
 
 192.168.X.Z
