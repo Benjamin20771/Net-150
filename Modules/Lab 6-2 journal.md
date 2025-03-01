@@ -3,6 +3,8 @@
 ### Summary of Classful Subnetting
 This lab was interesting for me because I struggled with it a decent amount. We made three separate networks and connected them all. The photo below helped out a lot as it explained what to use the IPs for. When connecting networks they all have their ending like 0-31, 32-63, 64-95, etc. ex. 192.168.1.1. 
 
+Refer to my "Subnetting tips.md" on GitHub to get more help with subnetting. It explains a lot and is very helpful for me.
+
 ### Commands
 
 Not many commands unless you want to use the GUI area to fill in information.
