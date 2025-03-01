@@ -5,6 +5,8 @@ This lab was interesting for me because I struggled with it a decent amount. We 
 
 Refer to my "Subnetting tips.md" on GitHub to get more help with subnetting. It explains a lot and is very helpful for me.
 
+Serial numbers were new to this lab. The picture below explains what numbers to use for them. For this, you use every number you can like 97 then 98 to connect the router's serial connections. 
+
 ### Commands
 
 Not many commands unless you want to use the GUI area to fill in information.
