@@ -2,12 +2,35 @@
 
 ![image](https://github.com/user-attachments/assets/772af3e0-ee63-41af-8eb0-63007cf1b96b)
 
-# Lab 7.1 quick note
+# Midterm quick notes
 
-router rip
+ipconfig
 
-version 2 command
+ipconfig/all
 
+Filter for ICMP (Ping) Packets
+
+In the Wireshark filter bar, enter:
+icmp
+This filters the packet list to show only ping requests (ICMP Echo Request) and ping replies (ICMP Echo Reply).
+Find the Ping Requests:
+
+Click on an ICMP Echo Request packet.
+Expand the Ethernet II section in the packet details pane (middle pane).
+Locate the Source MAC Address (xx:xx:xx:xx:xx:xx format).
+Locate the Destination MAC Address.
+Find the Ping Replies:
+
+Click on an ICMP Echo Reply packet.
+Expand the Internet Protocol (IP) section.
+Locate the Source IP Address (this is the sender of the reply).
+Locate the Destination IP Address (this is the original sender of the ping request).
+
+Answering Your Questions:
+Source MAC Address of Ping Requests → Found in the Ethernet II section under Source.
+Destination MAC Address of Ping Requests → Found in the Ethernet II section under Destination.
+Source IP Address of the Ping Reply → Found in the IP Header under Source.
+Destination IP Address of the Ping Reply → Found in the IP Header under Destination.
 
 # IPV4 summary
 
