@@ -1,4 +1,4 @@
-# Lab 7-1 Static Routing
+# Lab 9-1 Static Routing
 
 ### Summary
 In this lab, we were given a network where everything is set up (good use of reference if ever needed) and we have to set up the static IP routes for each router. Below everything is explained/shown.
