@@ -1,13 +1,14 @@
 # Lab 9-2
 
 ### Summary
-We made two networks with two routers/4switches/5Pcs
+We made two networks with two routers/4switches/5Pcs. 
+
+This lab was to practice static routing and help with basic networking. Getting the chart together wasn't difficult, but there were some things to remember, like jumping numbers for specific things.
 
 <img width="933" alt="image" src="https://github.com/user-attachments/assets/b75837a4-72f2-4086-9a58-f62c9722db10" />
 
 <img width="593" alt="image" src="https://github.com/user-attachments/assets/4213997a-a9a4-4fbc-888f-4ac874c93dd8" />
 
-This lab was to practice static routing and help with basic networking. Getting the chart together wasn't difficult, but there were some things to remember, like jumping numbers for specific things.
 
 ### Commands 
 
