@@ -2,6 +2,9 @@
 
 ![image](https://github.com/user-attachments/assets/772af3e0-ee63-41af-8eb0-63007cf1b96b)
 
+![image](https://github.com/user-attachments/assets/9c0782d3-6219-4cf8-938e-fc9de367507a)
+
+
 # Midterm quick notes
 
 ipconfig
