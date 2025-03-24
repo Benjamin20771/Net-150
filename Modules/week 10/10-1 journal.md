@@ -15,4 +15,6 @@ version 2- Makes rip version 2
 
 network x.x.x.x-This adds a network address to the rip of the router
 
+show ip route- This shows information based on the connections with the router.
+
 Note-RIP doesn't need a subnet cuz it automatically steals it from the router itself
