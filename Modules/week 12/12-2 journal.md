@@ -9,7 +9,8 @@ The only problem I had was connecting the laptops to the wireless router. I fixe
 ### Screenshots
 ![image](https://github.com/user-attachments/assets/c6f35541-b3b9-43bd-a323-477074757810)
 ![image](https://github.com/user-attachments/assets/f06ca1ea-12ec-46e7-9b7f-e47ebb21e89b)
-
+![image](https://github.com/user-attachments/assets/7675a735-5e79-49e2-8812-bf9da00275ab)
 
 ### Notes
+Firstly, using the images above I put in the IPs to everything. 
 
