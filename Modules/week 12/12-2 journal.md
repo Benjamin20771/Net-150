@@ -14,3 +14,35 @@ The only problem I had was connecting the laptops to the wireless router. I fixe
 ### Notes
 Firstly, using the images above I put in the IPs to everything. 
 
+#### At the top of the window, click Wireless. Set the Network Mode to Wireless-N Only and change the SSID to whatever you want to call your network.
+
+● Disable SSID Broadcast and click Save Settings.
+
+● Click the Wireless Security option.
+
+● Change the Security Mode from Disabled to WPA2 Personal.
+
+● Configure a passphrase.
+
+● Scroll to the bottom of the page and click Save Settings
+
+#### Then on the laptop
+
+Click the Profiles tab.
+
+● Click New.
+
+● Name the new profile Wireless Access.
+
+● On the next screen, click Advanced Setup. Leave on Infrastructure Mode
+
+Then manually enter the SSID of your network on Wireless Network Name. Click
+
+● Choose Obtain network settings automatically (DHCP) as the network settings, and then
+
+
+● On Wireless Security, choose WPA2-Personal as the method of encryption and click Next.
+
+● Enter the passphrase and click Next.
+
+● Click Save and then click Connect to Network
