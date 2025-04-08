@@ -46,3 +46,5 @@ Then manually enter the SSID of your network on Wireless Network Name. Click
 ● Enter the passphrase and click Next.
 
 ● Click Save and then click Connect to Network
+
+You can then, after connecting everything with cross-over wires, type the IP of the server in the web browser in the laptop and you will have access.
