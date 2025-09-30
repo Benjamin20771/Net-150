@@ -4,6 +4,8 @@
 
 ![image](https://github.com/user-attachments/assets/9c0782d3-6219-4cf8-938e-fc9de367507a)
 
+<img width="907" height="212" alt="image" src="https://github.com/user-attachments/assets/68202e61-9275-4fb1-9607-55c8841a6b04" />
+
 
 # Midterm quick notes
 
